@@ -1,6 +1,6 @@
 // Name: Emilina Sanduleac
 // Date: 3/8/23
-// Description: Tip calculator with percentage and option to split the bill if needed.
+// Description: Tip calculator with percentage and option to split the bill if  needed.
 
 'use strict';
 
