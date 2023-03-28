@@ -19,16 +19,19 @@
         </div>
     </div>
     <div class="container">
-        <div class="title">Tip</div>
-        <div class="inputContainer">
-            <span>%</span>
+        <div class="title">Tip % </div>
+        <div class="sliderContainer">
             <label for="tipInput"></label><input
                 onkeyup="calculateBill()"
-                type="text"
+                type="range"
                 id="tipInput"
-                placeholder="10"
+                min="1"
+                max="100"
+                value="50"
+                class="sliderContainer"
         />
         </div>
+        <p>Percentage: <span id="demo"></span> </p>
     </div>
     <div class="container" id="bottom">
         <div class="splitContainer">
