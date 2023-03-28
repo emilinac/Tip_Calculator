@@ -8,11 +8,12 @@ const billInput = document.getElementById('billTotalInput')
 const slider = document.getElementById('tipInput')
 const numberOfPeopleDiv = document.getElementById('numberOfPeople')
 const perPersonTotalDiv = document.getElementById('perPersonTotal')
-const output = document.getElementById("demo")
+const output = document.getElementById('demo')
 output.tipInput = slider.value;
 
 slider.oninput = function() {
     output.innerHTML = this.value;
+    calculateBill()
 }
 
 let numberOfPeople = Number(numberOfPeopleDiv.innerText)
