@@ -5,15 +5,21 @@
 'use strict';
 
 const billInput = document.getElementById('billTotalInput')
-const tipInput = document.getElementById('tipInput')
+const slider = document.getElementById('tipInput')
 const numberOfPeopleDiv = document.getElementById('numberOfPeople')
 const perPersonTotalDiv = document.getElementById('perPersonTotal')
+const output = document.getElementById("demo")
+output.tipInput = slider.value;
+
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
 
 let numberOfPeople = Number(numberOfPeopleDiv.innerText)
 
 let calculateBill = () => {
     let bill = Number(billInput.value);
-    let tipPercentage = Number(tipInput.value) / 100;
+    let tipPercentage = Number(slider.value) / 100;
     let tipAmount = bill * tipPercentage;
     let total = bill + tipAmount;
     let perPersonTotal = total / numberOfPeople;
